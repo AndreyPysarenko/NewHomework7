@@ -1,0 +1,31 @@
+.portfolio-applications {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+  gap: 15px 8px;
+  flex-wrap: wrap;
+
+  @include mq(tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0;  
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
+ 
+  &__item:nth-child(3) {
+    @include mq(only-phone) {
+      margin-right: 40px;
+    }
+  }
+
+  &__item:not(:first-child) {
+    @include mq(tablet) {
+      margin-left: 8px;
+    }    
+  }
+}

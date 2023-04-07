@@ -1,0 +1,79 @@
+.section-order {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin: auto;
+  text-align: center;  
+  max-width: 1600px;
+  background-color: $accent-bg-color;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/order/bg_mob@1x.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/order/bg_mob@2x.jpg);
+  }
+
+  @include mq(tablet) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/order/bg_tab@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/order/bg_tab@2x.jpg);
+  }
+  }
+
+  @include mq(desktop) {
+    padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/order/bg_desk@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/order/bg_desk@2x.jpg);
+  }
+  }
+
+  &__lable {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: calc(60 / 44);
+    letter-spacing: 0.06em;
+    color: $title-text-color;
+    text-transform: uppercase;
+
+    @include mq(desktop) {
+      font-size: 44px;
+    }
+  }
+}
