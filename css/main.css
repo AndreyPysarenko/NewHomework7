@@ -125,11 +125,6 @@ img {
   background-color: #4D5AE5;
   color: #ffffff;
 }
-@media screen and (min-width: 1158px) {
-  .section-order__button {
-    min-width: 216px;
-  }
-}
 .section-order__button:hover, .section-order__button:focus {
   background-color: #404BBF;
   -webkit-transition-property: background-color, -webkit-box-shadow;
