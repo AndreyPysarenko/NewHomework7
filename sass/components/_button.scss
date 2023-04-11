@@ -9,28 +9,28 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 200px;
-  height: 50px;
+  min-width: 169px;
+  height: 56px;
 
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  background-color: $button-order-bg-color;
+  background-color: $button-bg-color;
   color: $title-text-color;
 
-@include mq(desktop) {
-  min-width: 216px;
-}
+  @include mq(desktop) {
+    min-width: 216px;
+  }
 
   &:hover,
   &:focus {
-    background-color: $button-order-hover-bg-color;
+    background-color: $button-hover-bg-color;
     transition-property: box-shadow, background-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
@@ -44,24 +44,24 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 200px;
-  height: 50px;
+  min-width: 169px;
+  height: 56px;
 
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  background-color: $button-order-bg-color;
+  background-color: $button-bg-color;
   color: $title-text-color;
 
   &:hover,
   &:focus {
-    background-color: $button-order-hover-bg-color;
+    background-color: $button-hover-bg-color;
     transition-property: box-shadow, background-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
@@ -80,24 +80,24 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 200px;
-  height: 50px;
+  min-width: 165px;
+  height: 40px;
 
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  background-color: $button-order-bg-color;
-  color: $title-text-color;
+  background-color: $button-bg-color;
+  color: $button-text-color;
 
   &:hover,
   &:focus {
-    background-color: $button-order-hover-bg-color;
+    background-color: $button-hover-bg-color;
     transition-property: box-shadow, background-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
@@ -108,33 +108,43 @@
     align-items: center;
     justify-content: center;
 
-    margin-left: 10px;
+    margin-left: 16px;
 
-    fill: $primary-bg-color;
+    fill: $icon-subscribe-color;
   }
 }
 
 /* <Portfolio> */
 
 .portfolio-applications__button {
-  display: inline-block;
-  padding: 6px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
 
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
   border-radius: 4px;
-  border: none;
+  color: $accent-text-color;
+  border: 1px solid $applications-button-border-color;
   background-color: $applications-button-bg-color;
+
+  @include mq(tablet) {
+    padding: 12px 24px;
+  }
 
   &:hover,
   &:focus {
-    background-color: $applications-button-hover-bg-color;
-    color: $title-text-color;
+    border: none;
+    color: $button-text-color;
+    background-color: $button-hover-bg-color;
     box-shadow: var(--box-shadow-applications);
     transition-property: color, background-color, box-shadow;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
-  }  
+  }
 }

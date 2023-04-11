@@ -1,176 +1,180 @@
-.menu-toggle {    
-    min-height: 40px;
-    min-width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    margin-left: auto;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    fill: $primary-text-color;
-    
-  
-    @include mq(tablet) {
-        display: none;
-    }   
-  }
-  
-  .menu-toggle:hover,
-  .menu-toggle:focus {
-    fill: $accent-text-color;
-    transition-property: fill;
-      transition-duration: var(--transition-duration);
-      transition-timing-function: var(--transition-timing-function);
+.mobile-menu-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  @include mq(tablet) {
+    display: none;
   }
 
-  .menu-container {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 48px 40px;
-    background-color: #ffffff;
-    z-index: 999;
-  
-    transform: translateX(100%);    
-    transition-property: transform;
+  &__icon {
+    stroke: $modal-icon-color;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 35px;
+  background-color: $primary-bg-color;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition-property: transform;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $modal-icon-close-bg-color;
+  fill: $modal-icon-color;
+
+  &:hover,
+  &:focus {
+    fill: #ffffff;
+    background-color: $button-hover-bg-color;
+    border: none;
+    transition-property: fill, background-color, border;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
-  
-    &.is-open {
-      transform: translateX(0);
-    }
-  
-    .menu-toggle {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      color: #fff;
+  }
 
-      @include mq(tablet) {
-        display: none;
-      }
-    }
+  @include mq(tablet) {
+    display: none;
+  }
 }
 
 .mobile-menu {
-    
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: calc(47 / 40);
-    letter-spacing: 0.02em; 
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  letter-spacing: 0.02em;
 
-    &__item {
-        position: relative;
+  margin-bottom: 284px;
 
-        &:not(:last-child) {
-            margin-bottom: 32px;
-          }
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
     }
+  }
 
-&__link {
-    
+  &__link {
     color: $primary-text-color;
 
     &:hover,
     &:focus {
-      color: $accent-text-color;
+      color: $active-link-text-color;
       transition-property: color;
       transition-duration: var(--transition-duration);
       transition-timing-function: var(--transition-timing-function);
     }
 
     &--active {
-        color: $accent-text-color;
-      }
-  
-      &--understudio::after {
-        position: absolute;
-        content: "";
-        width: 139px;
-        height: 4px;
-        left: 0;
-        bottom: -4px;
-        background-color: $underline-color;
-        border-radius: 2px;
-      }
-
-      &--underportfolio::after {
-        position: absolute;
-        content: "";
-        width: 219px;
-        height: 4px;
-        left: 0;
-        bottom: -4px;
-        background-color: $underline-color;
-        border-radius: 2px;
-      }      
-}
+      color: $active-link-text-color;
+    }
+  }
 }
 
 .menu__contacts {
-    display: block;
-    margin-top: auto;
+  display: block;
+  margin-top: auto;
 }
 
 .contacts-list {
-    &--tel {
-        font-family: inherit;
-font-weight: 500;
-font-size: 34px;
-line-height: calc(40 / 34);
-letter-spacing: 0.02em;
+  margin-bottom: 48px;
 
-margin-bottom: 32px;
-
-.link {
-    color: $accent-text-color;
-}
-    }
-
-    &--mail {
-        font-family: inherit;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: calc(28 / 24);
-        letter-spacing: 0.02em;
-
-.link {
-    color: $secondary-text-color;
-}
-    }    
-}
-
-.menu__social-links {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 64px;
-  
+  &--tel {
     font-family: inherit;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: calc(22 / 18);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(40 / 36);
     letter-spacing: 0.02em;
-  
-    
-  
-    .item {
-      &:not(:last-child) {
-        margin-right: 10px;
-        padding-right: 10px;
-        border-right: 1px solid rgba(33, 33, 33, 0.2);
-      }
-    }
-  
+
+    margin-bottom: 40px;
+
     .link {
       color: $accent-text-color;
     }
   }
+
+  &--mail {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    letter-spacing: 0.02em;
+
+    .link {
+      color: $secondary-text-color;
+    }
+  }
+}
+
+.modal-card {
+  display: flex;
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    margin-right: 56px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: $icon-primary-color;
+    background-color: $icon-primary-bg-color;
+
+    &:hover,
+    &:focus {
+      background-color: $icon-primary-hover-bg-color;
+      transition-property: background-color;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

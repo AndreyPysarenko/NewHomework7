@@ -21,10 +21,10 @@
 
 .modal-window {
   position: absolute;
-  padding-top: 40px;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  padding-right: 40px;
+  padding-top: 72px;
+  padding-left: 16px;
+  padding-bottom: 24px;
+  padding-right: 16px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -32,17 +32,24 @@
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 
-  min-width: 450px;
-  min-height: 609px;
+  min-width: 392px;
+  min-height: 586px;
 
-  background-color: $primary-bg-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: $modal-bg-color;
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))
+    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12))
+    drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14));
   border-radius: 4px;
 
+  @include mq(tablet) {
+    min-width: 408px;
+    min-height: 586px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   @include mq(desktop) {
-    min-width: 528px;
-  min-height: 581px;
+    min-height: 584px;
   }
 }
 
@@ -52,41 +59,35 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  top: 8px;
-  right: 8px;
-
-  width: 30px;
-  height: 30px;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: $primary-bg-color;
+  background-color: $modal-icon-close-bg-color;
+  fill: $modal-icon-color;
 
-  &__icon {
-    fill: #000000;
-
-    &:hover,
-    &:focus {
-      fill: $accent-text-color;
-      transition-property: fill;
-      transition-duration: var(--transition-duration);
-      transition-timing-function: var(--transition-timing-function);
-    }
+  &:hover,
+  &:focus {
+    fill: #ffffff;
+    background-color: $button-hover-bg-color;
+    border: none;
+    transition-property: fill, background-color, border;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
   }
 }
 
 .modal-title {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-family: inherit;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: calc(30 / 20);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: $primary-text-color;
-
-  @include mq(desktop) {
-    line-height: calc(23 / 20);
-  }
 }
 
 .modal-form {
@@ -99,23 +100,23 @@
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
-    color: $secondary-text-color;
+    color: $modal-text-color;
   }
-  
+
   &__input {
     width: 100%;
     height: 40px;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
     margin: 0;
-    padding: 10px;
-    padding-left: 42px;
-    color: $secondary-text-color;
+    padding: 9px;
+    padding-left: 34px;
+    color: $primary-text-color;
+    background-color: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
 
     &--wrapper {
       position: relative;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     &--wrapper input {
@@ -124,62 +125,61 @@
 
     &:focus {
       outline: 0;
-      border-color: $accent-icon-color;
+      border-color: $modal-active-icon-color;
     }
     &:focus + .modal-form__icon {
-      fill: $accent-icon-color;
+      fill: $modal-active-icon-color;
     }
   }
 
   &__icon {
     position: absolute;
-    left: 15px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    fill: $primary-icon-color;
+    fill: $modal-icon-color;
   }
 
   &__textarea {
     width: 100%;
     height: 120px;
-    padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+    padding: 8px 16px;
     resize: none;
-    color: $secondary-text-color;
+    color: $primary-text-color;
+    background-color: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
 
     &:focus {
       outline: 0;
-      border-color: $accent-icon-color;
+      border-color: $modal-active-icon-color;
     }
 
     &::placeholder {
       font-family: inherit;
       font-weight: 400;
-      font-size: 14px;
-      line-height: calc(16 / 14);
-      letter-spacing: 0.01em;
-      color: rgba(117, 117, 117, 0.5);
-
-      @include mq(desktop) {
-        font-size: 12px;
+      font-size: 12px;
       line-height: calc(14 / 12);
-      }
+      letter-spacing: 0.04em;
+      color: $modal-text-color;
     }
   }
 }
 
 .check-line {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 18px;
+  margin-bottom: 24px;
   display: flex;
-  justify-content: center;
+
+  @include mq(desktop) {
+    margin-top: 16px;
+  }
 
   & input:checked + .checkbox-agree .checkbox-agree__icon {
-    fill: $secondary-icon-color;
+    fill: $icon-secondary-color;
 
     &--wrapper {
-      background-color: $accent-icon-color;
+      background-color: $icon-primary-hover-bg-color;
       border: none;
     }
   }
@@ -188,27 +188,21 @@
 .checkbox-agree {
   display: flex;
   align-items: center;
-
   font-family: inherit;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 
-  color: $secondary-text-color;
-
-  @include mq(desktop) {
-    font-size: 14px;
-  line-height: calc(24 / 14);
-  }
+  color: $modal-text-color;
 
   &__icon {
     fill: transparent;
 
     &--wrapper {
       width: 16px;
-      height: 15px;
-      border: 2px solid #212121;
+      height: 16px;
+      border: 2px solid rgba(46, 47, 66, 0.4);
       border-radius: 2px;
       margin-right: 8px;
       display: flex;
@@ -219,7 +213,6 @@
 
   &__link {
     margin-left: 5px;
-
     text-decoration: underline;
     color: $accent-text-color;
   }

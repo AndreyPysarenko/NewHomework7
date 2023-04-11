@@ -1,79 +1,83 @@
 .section-order {
-  padding-top: 118px;
-  padding-bottom: 118px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   margin: auto;
-  text-align: center;  
-  max-width: 1600px;
-  background-color: $accent-bg-color;
+  text-align: center;
+  max-width: 1440px;
+  background-color: $hero-bg-color;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
     ),
-    url(../images/order/bg_mob@1x.jpg);
+    url(../images/hero/bg_mob@1x.jpg);
 
   @media screen and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/order/bg_mob@2x.jpg);
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/bg_mob@2x.jpg);
   }
 
   @include mq(tablet) {
     background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/order/bg_tab@1x.jpg);
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/bg_tab@1x.jpg);
 
     @media screen and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/order/bg_tab@2x.jpg);
-  }
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/bg_tab@2x.jpg);
+    }
   }
 
   @include mq(desktop) {
-    padding-top: 200px;
-  padding-bottom: 200px;
+    padding-top: 188px;
+    padding-bottom: 188px;
 
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/order/bg_desk@1x.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/bg_desk@1x.jpg);
 
     @media screen and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/order/bg_desk@2x.jpg);
-  }
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/bg_desk@2x.jpg);
+    }
   }
 
   &__lable {
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: calc(60 / 44);
-    letter-spacing: 0.06em;
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    letter-spacing: 0.02em;
     color: $title-text-color;
-    text-transform: uppercase;
+
+    @include mq(tablet) {
+      margin-bottom: 36px;
+      font-size: 56px;
+    }
 
     @include mq(desktop) {
-      font-size: 44px;
+      margin-bottom: 48px;
     }
   }
 }

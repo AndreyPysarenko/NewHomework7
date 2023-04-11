@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,17 +34,17 @@
 
           <ul class="site-nav list">
             <li class="site-nav__item">
-              <a class="site-nav__link link" href="./index.html">Студія</a>
+              <a class="site-nav__link link" href="./index.html">Studio</a>
             </li>
             <li class="site-nav__item">
               <a
                 class="site-nav__link site-nav__link--active site-nav__link--underline link"
                 href="./portfolio.html"
-                >Портфоліо</a
+                >Portfolio</a
               >
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link link" href="#">Контакти</a>
+              <a class="site-nav__link link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -58,72 +58,118 @@
                 href="mailto:info@devstudio.com"
                 class="link contacts__link contacts__mail"
               >
-                <svg class="contacts__icon contacts__icon--mail">
-                  <use href="./images/icons.svg#icon-envelope"></use></svg
-                >info@devstudio.com</a
+                info@devstudio.com</a
               >
             </li>
             <li class="contacts__item">
               <a
-                href="tel:+380961111111"
+                href="tel:+11(000)1111111"
                 class="link contacts__link contacts__tel"
               >
-                <svg class="contacts__icon contacts__icon--tel">
-                  <use href="./images/icons.svg#icon-smartphone"></use></svg
-                >+38 096 111 11 11</a
+                +11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </div>
-        <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="menu-toggle__icon--menu" width="40" height="40" aria-label="Mobile menu switcher">
-            <use href="./images/icons.svg#icon-menu"></use>
+        <button
+          type="button"
+          class="mobile-menu-open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mobile-menu-open__icon"
+            width="32"
+            height="22"
+            aria-label="Mobile menu switcher"
+          >
+            <use href="./images/svg/icons.svg#icon-menu-hamburger"></use>
           </svg>
         </button>
 
         <!-- Modal menu -->
-        <div class="menu-container js-menu-container" id="mobile-menu">
-          <button class="menu-toggle js-close-menu">
-            <svg width="40" height="40" aria-label="Mobile menu close">
-              <use href="./images/icons.svg#icon-close"></use>
+        <div class="menu-container js-menu-container">
+          <button class="mobile-menu-close js-close-menu">
+            <svg
+              class="mobile-menu-close__icon"
+              width="8"
+              height="8"
+              aria-label="Mobile menu close"
+            >
+              <use href="./images/svg/icons.svg#icon-close"></use>
             </svg>
           </button>
 
           <ul class="mobile-menu list">
             <li class="mobile-menu__item">
               <a
-                class="mobile-menu__link link"
+                class="mobile-menu__link mobile-menu__link--active link"
                 href="./index.html"
-                >Студія</a
+                >Studio</a
               >
             </li>
             <li class="mobile-menu__item">
-              <a class="mobile-menu__link mobile-menu__link--active mobile-menu__link--underportfolio link" href="./portfolio.html"
-                >Портфоліо</a
+              <a class="mobile-menu__link link" href="./portfolio.html"
+                >Portfolio</a
               >
             </li>
             <li class="mobile-menu__item">
-              <a class="mobile-menu__link link" href="#">Контакти</a>
-            </li>
-          </ul>               
-
-        <div class="menu__contacts">
-          <ul class="contacts-list list">
-            <li class="contacts-list--tel">
-              <a href="tel:+380961111111" class="link"><span>+38 096 111 11 11</span></a>
-            </li>
-            <li class="contacts-list--mail">
-              <a href="mailto:info@devstudio.com" class="link"><span>info@devstudio.com</span></a>
+              <a class="mobile-menu__link link" href="#">Contacts</a>
             </li>
           </ul>
-          <ul class="menu__social-links list">
-            <li class="item"><a href="" class="link">Instagram</a></li>
-            <li class="item"><a href="" class="link">Twitter</a></li>
-            <li class="item"><a href="" class="link">Facebook</a></li>
-            <li class="item"><a href="" class="link">LinkedIn</a></li>
-          </ul>
-        </div>
 
+          <div class="menu__contacts">
+            <ul class="contacts-list list">
+              <li class="contacts-list--tel">
+                <a href="tel:+11(000)1111111" class="link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contacts-list--mail">
+                <a href="mailto:info@devstudio.com" class="link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="modal-card list">
+              <li class="modal-card__item">
+                <a href="" class="modal-card__link link">
+                  <svg class="modal-card__icon" width="24" height="24">
+                    <use
+                      href="./images/svg/icons.svg#icon-instagram_foter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="modal-card__item">
+                <a href="" class="modal-card__link link">
+                  <svg class="modal-card__icon" width="24" height="24">
+                    <use href="./images/svg/icons.svg#icon-twitter_foter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="modal-card__item">
+                <a href="" class="modal-card__link link">
+                  <svg class="modal-card__icon" width="24" height="24">
+                    <use
+                      href="./images/svg/icons.svg#icon-facebook_foter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="modal-card__item">
+                <a href="" class="modal-card__link link">
+                  <svg class="modal-card__icon" width="24" height="24">
+                    <use
+                      href="./images/svg/icons.svg#icon-linkedin_foter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -131,16 +177,16 @@
     <main>
       <!-- <section portfolio> -->
 
-      <section class="section-portfolio section">
+      <section class="section-portfolio">
         <div class="container">
-          <h1 class="visually-hidden">Портфоліо</h1>
+          <h1 class="visually-hidden">Portfolio</h1>
           <ul class="portfolio-applications list">
             <li class="portfolio-applications__item">
               <button
                 class="portfolio-applications__button button"
                 type="button"
               >
-                Усі
+                All
               </button>
             </li>
             <li class="portfolio-applications__item">
@@ -148,7 +194,7 @@
                 class="portfolio-applications__button button"
                 type="button"
               >
-                Веб-сайти
+                Web Site
               </button>
             </li>
             <li class="portfolio-applications__item">
@@ -156,7 +202,7 @@
                 class="portfolio-applications__button button"
                 type="button"
               >
-                Додатки
+                App
               </button>
             </li>
             <li class="portfolio-applications__item">
@@ -164,7 +210,7 @@
                 class="portfolio-applications__button button"
                 type="button"
               >
-                Дизайн
+                Design
               </button>
             </li>
             <li class="portfolio-applications__item">
@@ -172,7 +218,7 @@
                 class="portfolio-applications__button button"
                 type="button"
               >
-                Маркетинг
+                Marketing
               </button>
             </li>
           </ul>
@@ -185,60 +231,30 @@
                 <div class="img-wrapper">
                   <img
                     srcset="
-                      ./images/portfolio/img-1_354.jpg 354w,
-                      ./images/portfolio/img-1_370.jpg 370w,
-                      ./images/portfolio/img-1_450.jpg 450w,
-                      ./images/portfolio/img-1_708.jpg 708w,
-                      ./images/portfolio/img-1_740.jpg 740w,
-                      ./images/portfolio/img-1_900.jpg 900w
+                      ./images/portfolio/img-1_356.jpg 356w,
+                      ./images/portfolio/img-1_360.jpg 360w,
+                      ./images/portfolio/img-1_396.jpg 396w,
+                      ./images/portfolio/img-1_712.jpg 712w,
+                      ./images/portfolio/img-1_720.jpg 720w,
+                      ./images/portfolio/img-1_792.jpg 792w
                     "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                    src="./images/portfolio/img-1_450.jpg"
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-1_396.jpg"
                     alt="Технокряк"
-                    width="450"
-                    height="294"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
-                  </div>
-                </div>
-                <div class="item-content">
-                  <h2 class="item-content__description">Технокряк</h2>
-                  <p class="item-content__subdivision">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-            <li class="card-set__item">
-              <a class="card-set__link link" href="#">
-                <div class="img-wrapper">
-                  <img
-                  srcset="
-                  ./images/portfolio/img-2_354.jpg 354w,
-                  ./images/portfolio/img-2_370.jpg 370w,
-                  ./images/portfolio/img-2_450.jpg 450w,
-                  ./images/portfolio/img-2_708.jpg 708w,
-                  ./images/portfolio/img-2_740.jpg 740w,
-                  ./images/portfolio/img-2_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-2_450.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="450"
-                    height="294"
-                  />
-                  <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
                   <h2 class="item-content__description">
-                    Постер New Orlean vs Golden Star
+                    Banking App Interface Concept
                   </h2>
-                  <p class="item-content__subdivision">Дизайн</p>
+                  <p class="item-content__subdivision">App</p>
                 </div>
               </a>
             </li>
@@ -246,29 +262,29 @@
               <a class="card-set__link link" href="#">
                 <div class="img-wrapper">
                   <img
-                  srcset="
-                  ./images/portfolio/img-3_354.jpg 354w,
-                  ./images/portfolio/img-3_370.jpg 370w,
-                  ./images/portfolio/img-3_450.jpg 450w,
-                  ./images/portfolio/img-3_708.jpg 708w,
-                  ./images/portfolio/img-3_740.jpg 740w,
-                  ./images/portfolio/img-3_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-3_450.jpg"
-                    alt="Ресторан Seafood"
-                    width="450"
-                    height="294"
+                    srcset="
+                      ./images/portfolio/img-2_356.jpg 356w,
+                      ./images/portfolio/img-2_360.jpg 360w,
+                      ./images/portfolio/img-2_396.jpg 396w,
+                      ./images/portfolio/img-2_712.jpg 712w,
+                      ./images/portfolio/img-2_720.jpg 720w,
+                      ./images/portfolio/img-2_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-2_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
-                  <h2 class="item-content__description">Ресторан Seafood</h2>
-                  <p class="item-content__subdivision">Додаток</p>
+                  <h2 class="item-content__description">Cashless Payment</h2>
+                  <p class="item-content__subdivision">Marketing</p>
                 </div>
               </a>
             </li>
@@ -276,29 +292,29 @@
               <a class="card-set__link link" href="#">
                 <div class="img-wrapper">
                   <img
-                  srcset="
-                  ./images/portfolio/img-4_354.jpg 354w,
-                  ./images/portfolio/img-4_370.jpg 370w,
-                  ./images/portfolio/img-4_450.jpg 450w,
-                  ./images/portfolio/img-4_708.jpg 708w,
-                  ./images/portfolio/img-4_740.jpg 740w,
-                  ./images/portfolio/img-4_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-4_450.jpg"
-                    alt="Проєкт Prime"
-                    width="450"
-                    height="294"
+                    srcset="
+                      ./images/portfolio/img-3_356.jpg 356w,
+                      ./images/portfolio/img-3_360.jpg 360w,
+                      ./images/portfolio/img-3_396.jpg 396w,
+                      ./images/portfolio/img-3_712.jpg 712w,
+                      ./images/portfolio/img-3_720.jpg 720w,
+                      ./images/portfolio/img-3_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-3_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
-                  <h2 class="item-content__description">Проєкт Prime</h2>
-                  <p class="item-content__subdivision">Маркетинг</p>
+                  <h2 class="item-content__description">Meditation App</h2>
+                  <p class="item-content__subdivision">App</p>
                 </div>
               </a>
             </li>
@@ -306,29 +322,29 @@
               <a class="card-set__link link" href="#">
                 <div class="img-wrapper">
                   <img
-                  srcset="
-                  ./images/portfolio/img-5_354.jpg 354w,
-                  ./images/portfolio/img-5_370.jpg 370w,
-                  ./images/portfolio/img-5_450.jpg 450w,
-                  ./images/portfolio/img-5_708.jpg 708w,
-                  ./images/portfolio/img-5_740.jpg 740w,
-                  ./images/portfolio/img-5_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-5_450.jpg"
-                    alt="Проєкт Boxes"
-                    width="450"
-                    height="294"
+                    srcset="
+                      ./images/portfolio/img-4_356.jpg 356w,
+                      ./images/portfolio/img-4_360.jpg 360w,
+                      ./images/portfolio/img-4_396.jpg 396w,
+                      ./images/portfolio/img-4_712.jpg 712w,
+                      ./images/portfolio/img-4_720.jpg 720w,
+                      ./images/portfolio/img-4_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-4_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
-                  <h2 class="item-content__description">Проєкт Boxes</h2>
-                  <p class="item-content__subdivision">Додаток</p>
+                  <h2 class="item-content__description">Taxi Service</h2>
+                  <p class="item-content__subdivision">Marketing</p>
                 </div>
               </a>
             </li>
@@ -336,31 +352,31 @@
               <a class="card-set__link link" href="#">
                 <div class="img-wrapper">
                   <img
-                  srcset="
-                  ./images/portfolio/img-6_354.jpg 354w,
-                  ./images/portfolio/img-6_370.jpg 370w,
-                  ./images/portfolio/img-6_450.jpg 450w,
-                  ./images/portfolio/img-6_708.jpg 708w,
-                  ./images/portfolio/img-6_740.jpg 740w,
-                  ./images/portfolio/img-6_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-6_450.jpg"
-                    alt="Inspiration has no Borders"
-                    width="450"
-                    height="294"
+                    srcset="
+                      ./images/portfolio/img-5_356.jpg 356w,
+                      ./images/portfolio/img-5_360.jpg 360w,
+                      ./images/portfolio/img-5_396.jpg 396w,
+                      ./images/portfolio/img-5_712.jpg 712w,
+                      ./images/portfolio/img-5_720.jpg 720w,
+                      ./images/portfolio/img-5_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-5_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
                   <h2 class="item-content__description">
-                    Inspiration has no Borders
+                    Screen Illustrations
                   </h2>
-                  <p class="item-content__subdivision">Веб-сайт</p>
+                  <p class="item-content__subdivision">Design</p>
                 </div>
               </a>
             </li>
@@ -368,31 +384,61 @@
               <a class="card-set__link link" href="#">
                 <div class="img-wrapper">
                   <img
-                  srcset="
-                  ./images/portfolio/img-7_354.jpg 354w,
-                  ./images/portfolio/img-7_370.jpg 370w,
-                  ./images/portfolio/img-7_450.jpg 450w,
-                  ./images/portfolio/img-7_708.jpg 708w,
-                  ./images/portfolio/img-7_740.jpg 740w,
-                  ./images/portfolio/img-7_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-7_450.jpg"
-                    alt="Видання Limited Edition"
-                    width="450"
-                    height="294"
+                    srcset="
+                      ./images/portfolio/img-6_356.jpg 356w,
+                      ./images/portfolio/img-6_360.jpg 360w,
+                      ./images/portfolio/img-6_396.jpg 396w,
+                      ./images/portfolio/img-6_712.jpg 712w,
+                      ./images/portfolio/img-6_720.jpg 720w,
+                      ./images/portfolio/img-6_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-6_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h2 class="item-content__description">Online Courses</h2>
+                  <p class="item-content__subdivision">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-set__item">
+              <a class="card-set__link link" href="#">
+                <div class="img-wrapper">
+                  <img
+                    srcset="
+                      ./images/portfolio/img-7_356.jpg 356w,
+                      ./images/portfolio/img-7_360.jpg 360w,
+                      ./images/portfolio/img-7_396.jpg 396w,
+                      ./images/portfolio/img-7_712.jpg 712w,
+                      ./images/portfolio/img-7_720.jpg 720w,
+                      ./images/portfolio/img-7_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-7_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
+                  />
+                  <div class="item-description">
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
                   <h2 class="item-content__description">
-                    Видання Limited Edition
+                    Instagram Stories Concept
                   </h2>
-                  <p class="item-content__subdivision">Дизайн</p>
+                  <p class="item-content__subdivision">Design</p>
                 </div>
               </a>
             </li>
@@ -400,29 +446,29 @@
               <a class="card-set__link link" href="#">
                 <div class="img-wrapper">
                   <img
-                  srcset="
-                  ./images/portfolio/img-8_354.jpg 354w,
-                  ./images/portfolio/img-8_370.jpg 370w,
-                  ./images/portfolio/img-8_450.jpg 450w,
-                  ./images/portfolio/img-8_708.jpg 708w,
-                  ./images/portfolio/img-8_740.jpg 740w,
-                  ./images/portfolio/img-8_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-8_450.jpg"
-                    alt="Проєкт LAB"
-                    width="450"
-                    height="294"
+                    srcset="
+                      ./images/portfolio/img-8_356.jpg 356w,
+                      ./images/portfolio/img-8_360.jpg 360w,
+                      ./images/portfolio/img-8_396.jpg 396w,
+                      ./images/portfolio/img-8_712.jpg 712w,
+                      ./images/portfolio/img-8_720.jpg 720w,
+                      ./images/portfolio/img-8_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-8_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
-                  <h2 class="item-content__description">Проєкт LAB</h2>
-                  <p class="item-content__subdivision">Маркетинг</p>
+                  <h2 class="item-content__description">Organic Food</h2>
+                  <p class="item-content__subdivision">Web Site</p>
                 </div>
               </a>
             </li>
@@ -430,29 +476,29 @@
               <a class="card-set__link link" href="#">
                 <div class="img-wrapper">
                   <img
-                  srcset="
-                  ./images/portfolio/img-9_354.jpg 354w,
-                  ./images/portfolio/img-9_370.jpg 370w,
-                  ./images/portfolio/img-9_450.jpg 450w,
-                  ./images/portfolio/img-9_708.jpg 708w,
-                  ./images/portfolio/img-9_740.jpg 740w,
-                  ./images/portfolio/img-9_900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 370px, (min-width: 768x) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/portfolio/img-9_450.jpg"
-                    alt="Growing Business"
-                    width="450"
-                    height="294"
+                    srcset="
+                      ./images/portfolio/img-9_356.jpg 356w,
+                      ./images/portfolio/img-9_360.jpg 360w,
+                      ./images/portfolio/img-9_396.jpg 396w,
+                      ./images/portfolio/img-9_712.jpg 712w,
+                      ./images/portfolio/img-9_720.jpg 720w,
+                      ./images/portfolio/img-9_792.jpg 792w
+                    "
+                    sizes="(min-width: 1158px) 360px, (min-width: 768x) 356px, (min-width: 428px) 396px, 100vw"
+                    src="./images/portfolio/img-9_396.jpg"
+                    alt="Технокряк"
+                    width="396"
+                    height="280"
                   />
                   <div class="item-description">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
                   </div>
                 </div>
                 <div class="item-content">
-                  <h2 class="item-content__description">Growing Business</h2>
-                  <p class="item-content__subdivision">Додаток</p>
+                  <h2 class="item-content__description">Fresh Coffee</h2>
+                  <p class="item-content__subdivision">Web Site</p>
                 </div>
               </a>
             </li>
@@ -465,74 +511,56 @@
 
     <footer class="page-footer">
       <div class="page-footer__container container">
-        <div>
-          <a class="page-footer__logo link" href="index.html"
-            >Web<span class="page-footer__logo--color">Studio</span></a
+        <div class="logo-describe">
+          <a class="logo-describe__logo link" href="index.html"
+            >Web<span class="logo-describe__logo--color">Studio</span></a
           >
-
-          <!-- adress -->
-
-          <address class="adress">
-            <ul class="adress__list list">
-              <li class="adress__item">
-                <a href="#" class="adress__link link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
-              </li>
-              <li class="adress__item">
-                <a href="info@devstudio.com" class="adress__mail link"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="adress__item">
-                <a href="+380961111111" class="adress__tell link"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
+          <p class="logo-describe__text">
+            Increase the flow of customers and sales for your business with
+            digital marketing & growth solutions.
+          </p>
         </div>
 
-        <!-- Join -->
+        <!-- Social media -->
 
-        <div class="join">
-          <p class="join-title">Приєднуйтесь</p>
+        <div class="social-media">
+          <p class="social-media__title">Social media</p>
           <ul class="card-icons list">
             <li class="card-icons__item">
               <a href="" class="card-icons__link link">
-                <svg class="card-icons__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
+                <svg class="card-icons__icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon-instagram_foter"></use>
                 </svg>
               </a>
             </li>
             <li class="card-icons__item">
               <a href="" class="card-icons__link link">
-                <svg class="card-icons__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
+                <svg class="card-icons__icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon-twitter_foter"></use>
                 </svg>
               </a>
             </li>
             <li class="card-icons__item">
               <a href="" class="card-icons__link link">
-                <svg class="card-icons__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
+                <svg class="card-icons__icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon-facebook_foter"></use>
                 </svg>
               </a>
             </li>
             <li class="card-icons__item">
               <a href="" class="card-icons__link link">
-                <svg class="card-icons__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
+                <svg class="card-icons__icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon-linkedin_foter"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
 
-        <!-- subscribe -->
+        <!-- Subscribe -->
 
         <div class="subscribe">
-          <p class="subscribe__title">Підпишіться на розсилку</p>
+          <p class="subscribe__title">Subscribe</p>
           <form action="#" name="form-footer" class="form-footer">
             <input
               name="user-mail"
@@ -543,19 +571,22 @@
               placeholder="E-mail"
             />
             <button class="button subscribe__button" type="submit">
-              Підписатися
+              Subscribe
               <svg class="subscribe__button--send" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
+                <use href="./images/svg/icons.svg#icon-Frame"></use>
               </svg>
             </button>
           </form>
         </div>
       </div>
     </footer>
-    
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"></script>
-  <script src="./js/mobile-menu.js"></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

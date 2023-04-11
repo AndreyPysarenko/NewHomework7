@@ -1,31 +1,40 @@
-.portfolio-applications {
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center; 
-  justify-content: flex-start;
-  gap: 15px 8px;
-  flex-wrap: wrap;
+.section-portfolio {
+  padding-top: 48px;
+  padding-bottom: 48px;
 
   @include mq(tablet) {
-    margin-bottom: 30px;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 0;  
+    padding-top: 64px;
+    padding-bottom: 96px;
   }
 
   @include mq(desktop) {
-    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 120px;
   }
- 
+}
+
+.portfolio-applications {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+
+  @include mq(tablet) {
+    margin-bottom: 64px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 72px;
+  }
+
   &__item:nth-child(3) {
     @include mq(only-phone) {
       margin-right: 40px;
     }
-  }
-
-  &__item:not(:first-child) {
-    @include mq(tablet) {
-      margin-left: 8px;
-    }    
   }
 }

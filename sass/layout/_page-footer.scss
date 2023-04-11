@@ -1,123 +1,103 @@
 .page-footer {
-  background-color: $accent-bg-color;
-  padding: 60px 0;
+  max-width: 1440px;
+  margin: auto;
+  background-color: $footer-bg-color;
+  padding: 96px 0;
+
+  @include mq(desktop) {
+    padding: 100px 0;
+  }
 
   &__container {
     text-align: center;
 
     @include mq(tablet) {
       display: flex;
-            
-      align-items: baseline;
-      justify-content: space-between;
       flex-wrap: wrap;
-
-      padding-right: 74px;
-      padding-left: 89px;    
-    }   
+      text-align: left;
+      column-gap: 24px;
+      row-gap: 72px;
+      padding-right: 108px;
+      padding-left: 164px;
+    }
 
     @include mq(desktop) {
-      text-align: left;
-      gap: 70px;
-      // flex-wrap: wrap;
-      // align-items: baseline;            
-      // justify-content: space-between;
+      column-gap: 0;
+      row-gap: 0;
       padding-right: 15px;
       padding-left: 15px;
     }
   }
+}
+
+.logo-describe {
+  display: inline-block;
+
+  margin: 0 65px;
+
+  @include mq(tablet) {
+    margin: 0;
+    max-width: 264px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 120px;
+  }
 
   &__logo {
-    display: block;
-    margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 24px;
-    line-height: calc(31 / 26);
+    font-size: 18px;
+    line-height: calc(21 / 18);
     letter-spacing: 0.03em;
     color: $accent-text-color;
 
-    @include mq(desktop) {
-      font-size: 26px;
-    }
-
     &--color {
-      color: $title-text-color;
+      color: $footer-secondary-text-color;
     }
   }
-}
 
-// address
+  &__text {
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 72px;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: 0.02em;
+    color: $footer-secondary-text-color;
 
-.adress {
-  &__list {
-    display: block;
-    font-style: normal;
-    line-height: 1.71;
-  }
-
-  &__item {
-    margin-bottom: 8px;
-
-    @include mq(desktop) {
-      margin-bottom: 9px;
-    }
-
-    &:last-child {
+    @include mq(tablet) {
       margin-bottom: 0;
     }
   }
-
-  &__link {
-    color: $title-text-color;
-
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
-      transition-property: color;
-      transition-duration: var(--transition-duration);
-      transition-timing-function: var(--transition-timing-function);
-    }
-  }
-
-  &__mail {
-    color: $adress-text-color;
-
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
-      transition-property: color;
-      transition-duration: var(--transition-duration);
-      transition-timing-function: var(--transition-timing-function);
-    }
-  }
-
-  &__tell {
-    color: $adress-text-color;
-
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
-      transition-property: color;
-      transition-duration: var(--transition-duration);
-      transition-timing-function: var(--transition-timing-function);
-    }
-  }
 }
 
-// Join
+// Social media
 
-.join-title {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  text-transform: uppercase;
-  color: $title-text-color;
+.social-media {
+  display: inline-block;
+  margin-bottom: 72px;
 
   @include mq(tablet) {
-    margin-top: 0px;
+    margin-bottom: 0;
+  }
+
+  @include mq(desktop) {
+    margin-right: 80px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: 0.02em;
+
+    color: $title-text-color;
+
+    @include mq(tablet) {
+      margin-top: 0px;
+    }
   }
 }
 
@@ -126,9 +106,9 @@
   justify-content: center;
 
   &__item {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
 
     &:last-child {
       margin-right: 0;
@@ -142,12 +122,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: $title-text-color;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: $icon-primary-color;
+    background-color: $icon-primary-bg-color;
 
     &:hover,
     &:focus {
-      background-color: $accent-icon-color;
+      background-color: $icon-footer-hover-bg-color;
       transition-property: background-color;
       transition-duration: var(--transition-duration);
       transition-timing-function: var(--transition-timing-function);
@@ -162,41 +142,23 @@
 // subscribe
 
 .subscribe {
-  padding-top: 60px;
-
-  @include mq(only-tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-      }
-
-      @include mq(desktop) {
-        padding-top: 0;
-      }
+  display: inline-block;
+  margin-right: auto;
 }
 
 .subscribe__title {
-  display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   font-family: inherit;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
 
   color: $title-text-color;
-
-  @include mq(desktop) {
-    display: block;
-  }
 }
 
 .form-footer {
-  // display: flex;
-  // align-items: flex-end;
-
   @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -205,35 +167,41 @@
 
   @include mq(desktop) {
     align-items: flex-end;
-      flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 
   & input {
-    width: 450px;
-    height: 50px;
-    margin-bottom: 20px;
+    width: 398px;
+    height: 40px;
+    margin-bottom: 16px;
 
-    @include mq(desktop) {
-      width: 358px;      
-      margin-right: 12px;
+    @include mq(tablet) {
+      width: 264px;
+      margin-right: 24px;
       margin-bottom: 0;
     }
-    
   }
 
   &__input {
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid $footer-form-border-color;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin: 0;
     padding: 16px;
-    color: $secondary-text-color;
+    color: $footer-text-color;
     background-color: transparent;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: calc(24 / 12);
+      letter-spacing: 0.04em;
+      color: $footer-text-color;
+    }
 
     &:focus {
       outline: 0;
-      border-color: #2196f3;
     }
   }
 }
