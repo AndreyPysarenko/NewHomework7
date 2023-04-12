@@ -51,6 +51,7 @@
     line-height: calc(21 / 18);
     letter-spacing: 0.03em;
     color: $accent-text-color;
+    text-transform: uppercase;
 
     &--color {
       color: $footer-secondary-text-color;

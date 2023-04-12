@@ -50,6 +50,7 @@
   color: $accent-text-color;
 
   &__label {
+    text-transform: uppercase;
     color: $primary-text-color;
   }
 }

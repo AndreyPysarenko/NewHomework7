@@ -790,6 +790,7 @@ img {
   color: #4D5AE5;
 }
 .header-logo__label {
+  text-transform: uppercase;
   color: #2E2F42;
 }
 
@@ -1292,8 +1293,6 @@ img {
   }
 }
 .clients-icons__item {
-  border: 1px solid #8E8F99;
-  border-radius: 4px;
   width: 190px;
   height: 88px;
 }
@@ -1301,15 +1300,6 @@ img {
   .clients-icons__item {
     width: 168px;
   }
-}
-.clients-icons__item:hover, .clients-icons__item:focus {
-  border: 1px solid #404BBF;
-  -webkit-transition-property: border;
-  transition-property: border;
-  -webkit-transition-duration: var(--transition-duration);
-          transition-duration: var(--transition-duration);
-  -webkit-transition-timing-function: var(--transition-timing-function);
-          transition-timing-function: var(--transition-timing-function);
 }
 .clients-icons__link {
   width: 100%;
@@ -1324,11 +1314,14 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   color: #8E8F99;
+  border: 1px solid #8E8F99;
+  border-radius: 4px;
 }
 .clients-icons__link:hover, .clients-icons__link:focus {
+  border: 1px solid #404BBF;
   color: #404BBF;
-  -webkit-transition-property: color;
-  transition-property: color;
+  -webkit-transition-property: border, color;
+  transition-property: border, color;
   -webkit-transition-duration: var(--transition-duration);
           transition-duration: var(--transition-duration);
   -webkit-transition-timing-function: var(--transition-timing-function);
@@ -1401,6 +1394,7 @@ img {
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: #4D5AE5;
+  text-transform: uppercase;
 }
 .logo-describe__logo--color {
   color: #F4F4FD;
@@ -1651,6 +1645,9 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 48px;
 }
 @media screen and (min-width: 768px) {
@@ -1659,6 +1656,9 @@ img {
        -moz-column-gap: 24px;
             column-gap: 24px;
     row-gap: 72px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -1741,7 +1741,7 @@ img {
 }
 
 .item-content {
-  padding: 16px 32px;
+  padding: 32px 16px;
   border: 1px solid #F4F4FD;
 }
 .item-content__description {

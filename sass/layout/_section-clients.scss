@@ -24,21 +24,11 @@
   }
 
   &__item {
-    border: 1px solid $icon-clients-color;
-    border-radius: 4px;
     width: 190px;
     height: 88px;
 
     @include mq(tablet) {
       width: 168px;
-    }
-
-    &:hover,
-    &:focus {
-      border: 1px solid $icon-hover-clients-color;
-      transition-property: border;
-      transition-duration: var(--transition-duration);
-      transition-timing-function: var(--transition-timing-function);
     }
   }
 
@@ -50,10 +40,14 @@
     justify-content: center;
     color: $icon-clients-color;
 
+    border: 1px solid $icon-clients-color;
+    border-radius: 4px;
+
     &:hover,
     &:focus {
+      border: 1px solid $icon-hover-clients-color;
       color: $icon-hover-clients-color;
-      transition-property: color;
+      transition-property: border, color;
       transition-duration: var(--transition-duration);
       transition-timing-function: var(--transition-timing-function);
     }
