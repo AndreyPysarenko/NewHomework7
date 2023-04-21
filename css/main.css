@@ -769,11 +769,11 @@ img {
 }
 @media screen and (min-width: 768px) {
   .page-header__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     min-height: 72px;
   }
-}
-.page-header__contacts {
-  margin-left: auto;
 }
 @media screen and (max-width: 767.98px) {
   .page-header__contacts {
@@ -820,7 +820,7 @@ img {
   position: relative;
 }
 .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 40px;
 }
 .site-nav__link {
   display: block;
