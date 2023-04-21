@@ -22,6 +22,7 @@
 .menu-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -80,8 +81,6 @@
   line-height: calc(40 / 36);
   letter-spacing: 0.02em;
 
-  margin-bottom: 284px;
-
   &__item {
     position: relative;
 
@@ -108,8 +107,7 @@
 }
 
 .menu__contacts {
-  display: block;
-  margin-top: auto;
+  display: block; 
 }
 
 .contacts-list {
@@ -143,7 +141,7 @@
 }
 
 .modal-card {
-  display: flex;
+  display: flex; 
 
   &__item {
     width: 40px;

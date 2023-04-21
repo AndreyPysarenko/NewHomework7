@@ -19,8 +19,8 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03em;
+  font-size: 16px;
+  letter-spacing: 0.02em;
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
 }
@@ -309,6 +309,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -372,7 +375,6 @@ img {
   font-size: 36px;
   line-height: 1.1111111111;
   letter-spacing: 0.02em;
-  margin-bottom: 284px;
 }
 .mobile-menu__item {
   position: relative;
@@ -398,7 +400,6 @@ img {
 
 .menu__contacts {
   display: block;
-  margin-top: auto;
 }
 
 .contacts-list {
@@ -835,7 +836,6 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    font-size: 14px;
   }
 }
 .site-nav__link:hover, .site-nav__link:focus {
