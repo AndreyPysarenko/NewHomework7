@@ -14,12 +14,12 @@
 
   &__container {
     display: flex;
-    align-items: center;
+    align-items: center;    
     min-height: 70px;
 
-    @include mq(only-phone) {
-      justify-content: space-between;
-    }
+    // @include mq(only-phone) {
+    //   justify-content: space-between;
+    // }
 
     @include mq(tablet) {
       min-height: 72px;
@@ -132,7 +132,7 @@
     flex-wrap: wrap;
     row-gap: 12px;
     justify-content: flex-end;
-    margin-left: 121px;
+    flex-direction: column;        
     align-items: center;
     font-weight: 500;
     font-size: 16px;
@@ -141,6 +141,7 @@
   }
 
   @include mq(desktop) {
+    flex-direction: row;
     flex-wrap: nowrap;
     gap: 0;
     margin-left: auto;
