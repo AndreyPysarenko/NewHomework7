@@ -8,6 +8,14 @@ html {
   box-sizing: border-box;
 }
 
+// .scroll {
+//   overflow: hidden;
+// }
+
+.no-scroll {
+  overflow: hidden;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
