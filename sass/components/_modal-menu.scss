@@ -143,17 +143,24 @@
   }
 }
 
+@media screen and (max-width: 427px) {
+  .contacts-list--tel {
+    font-size: 25px;
+  }
+}
+
 .modal-card {
   display: flex; 
+  justify-content: space-between;
 
   &__item {
     width: 40px;
     height: 40px;
-    margin-right: 56px;
+    // margin-right: 56px;
 
-    &:last-child {
-      margin-right: 0;
-    }
+    // &:last-child {
+    //   margin-right: 0;
+    // }
   }
 
   &__link {
