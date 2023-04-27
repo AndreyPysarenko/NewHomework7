@@ -1598,6 +1598,11 @@ img {
   outline: 0;
 }
 
+@media screen and (max-width: 427px) {
+  .form-footer input {
+    width: 100%;
+  }
+}
 .section-portfolio {
   padding-top: 48px;
   padding-bottom: 48px;
